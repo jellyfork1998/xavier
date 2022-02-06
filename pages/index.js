@@ -20,7 +20,7 @@ export default function Home(props) {
   console.log(pdd)
 useEffect(() => {
   setTotalF(totalCol);
-},[totalCol] );
+} );
 
   return (
 
@@ -107,7 +107,7 @@ useEffect(() => {
  
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
 
   const client = await MongoClient.connect('mongodb+srv://chandra68:mEQlqpTEI12rKjCE@cluster0.foyom.mongodb.net/xaviersave?retryWrites=true&w=majority');
   const db = client.db();
@@ -133,10 +133,9 @@ export async function getStaticProps(){
           ))
 
 
-      },
+      }
      
-    
-      revalidate:1
+  
   }
  
 }
