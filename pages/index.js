@@ -23,15 +23,15 @@ useEffect(() => {
 
   return (
 <div>
-    <div class="jumbotron">
-    <h1 class="display-3 text-center text-white" style={{background:"grey", borderRadius:'30px'}}>'Not everyone has the same path in life'</h1>
-    <h1 class="display-4">Hi All!</h1>
-    <p class="lead">Xavier Ravi, Ex-PO, does require to undergo lower foot amputation procedure within next couple of weeks.
+    <div className="jumbotron">
+    <h1 className="display-3 text-center text-white" style={{background:"grey", borderRadius:'30px'}}>'Not everyone has the same path in life'</h1>
+    <h1 className="display-4">Hi All!</h1>
+    <p className="lead">Xavier Ravi, Ex-PO, does require to undergo lower foot amputation procedure within next couple of weeks.
      I 'm Chandrasekar, EX PO, his batchmet, trying  to raise fund Rs 50000  for his medical expenses. So those who are in better state,please extend your support. Thank you!..
      </p>
     
    
-    <p class="lead">
+    <p className="lead">
     $ send to:   Bank Account No:xxxxxxxxxxxx  IFSC:xxxxxxx
     </p>
   </div>  
@@ -59,11 +59,12 @@ useEffect(() => {
    {navy_boys.map((navyb,index)=>{
      //console.log(index)
     totalCol= navyb.verify===true?totalCol+Number(navyb.money):totalCol;
-     
+  
    
-    return (<div className='d-inline-flex  m-2 justify-content-center'><div>
+    return (<div className='d-inline-flex  m-2 justify-content-center'  key={navyb.id}>
     <LoginContext.Provider value={{loggedin, setLoggedIn}}>
     <Contributor
+     
     name={navyb.name}
     money={navyb.money}
     number={navyb.snumber}
@@ -73,7 +74,7 @@ useEffect(() => {
     pdd={loggedin}
     /> 
    </LoginContext.Provider>
-    </div></div>)
+    </div>)
     
    })}
 
@@ -107,7 +108,8 @@ export async function getStaticProps(){
 
   return {
       props:{
-          meetups: meetups.map(meetup=>({
+          meetups: meetups.map((meetup,index)=>({
+              key:index,
               name:meetup.name,
               snumber:meetup.snumber,
               money:meetup.money,
