@@ -1,6 +1,12 @@
 {
   "name": "xav-sav-app",
+  
   "private": true,
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
