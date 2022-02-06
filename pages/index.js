@@ -112,7 +112,7 @@ export async function getServerSideProps(){
   const client = await MongoClient.connect('mongodb+srv://chandra68:mEQlqpTEI12rKjCE@cluster0.foyom.mongodb.net/xaviersave?retryWrites=true&w=majority');
   const db = client.db();
   const meetupsCollection=db.collection('xaviermemb')
-  const meetups=await meetupsCollection.find().toArray();
+  const meetups=await meetupsCollection.find().sort({"name":1}).toArray();
   //const tot=meetupsCollection.aggregate([ { $match: { verify: "true" } }, { $group: {_id: "$verify", TotalSum: { $sum: "$money" } } } ]).toString()
    client.close()
 
