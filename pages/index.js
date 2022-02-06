@@ -19,7 +19,7 @@ export default function Home(props) {
   console.log(pdd)
 useEffect(() => {
   setTotalF(()=>totalCol);
-} );
+},[totalCol] );
 
   return (
 <div>
