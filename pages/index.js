@@ -24,10 +24,10 @@ useEffect(() => {
   return (
 <div>
     <div className="jumbotron">
-    <h1 className="display-3 text-center text-white" style={{background:"grey", borderRadius:'30px'}}>'Not everyone has the same path in life'</h1>
+    <h1 className="display-3 text-center text-white" style={{background:"grey", borderRadius:"30px"}}>{`"Not everyone has the same path in life"`}</h1>
     <h1 className="display-4">Hi All!</h1>
-    <p className="lead">Xavier Ravi, Ex-PO, does require to undergo lower foot amputation procedure within next couple of weeks.
-     I 'm Chandrasekar, EX PO, his batchmet, trying  to raise fund Rs 50000  for his medical expenses. So those who are in better state,please extend your support. Thank you!..
+    <p className="lead">{`Xavier Ravi, Ex-PO, does require to undergo lower foot amputation procedure within next couple of weeks.
+     I 'm Chandrasekar, EX PO, his batchmet, trying  to raise fund Rs 50000  for his medical expenses. So those who are in better state,please extend your support. Thank you!..`}
      </p>
     
    
