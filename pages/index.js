@@ -12,13 +12,13 @@ export default function Home(props) {
   const  navy_boys=props.meetups
   var totalCol=0;
   var totlen=navy_boys.length
-  // const [totfund, setTotalFund]=useState(false)
+  const [totfund, setTotalFund]=useState(false)
   const [totf, setTotalF]=useState(0)
   const [loggedin, setLoggedIn]=useState(false)
   const pdd=props.pwd
   console.log(pdd)
 useEffect(() => {
-  setTotalF(totalCol);
+  setTotalF(()=>totalCol);
 } );
 
   return (
