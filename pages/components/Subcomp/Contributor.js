@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import classes from './Contributor.module.css'
 
 
 
@@ -22,7 +23,7 @@ function ContributorTable(props){
     }
 
     return <div className='align-items-start' style={{marginBottom:"10px"}}>
-    <div className="card " style={{backgroundColor: "#0093E9",backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",width:"200px", height:'300px'}}>
+    <div className= {`"card"`, classes.csize}    style={{backgroundColor: "#0093E9",backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)"}}>
     
         <div className="card-title mt-3">
        
@@ -30,15 +31,16 @@ function ContributorTable(props){
             
             <div>
             <h3 className="text-center text-white pe-3">{props.name}</h3>
-            <h6 className="text-center text-white pe-3">{props.number}</h6>
+            
             </div>
             
             </div>
             </div>
             <div className="card-body text-center">
             <div className="card-text">
-            <h6 className="mb-3"> Contributed: </h6>
-            <h2 className="mb-3">  Rs. {props.money} </h2>
+            <h6 className="text-center text-white pe-3">{props.number}</h6>
+            <h6 className="mb-3"> Contributed </h6>
+            <h2 className="mb-2">  Rs. {props.money} </h2>
 
              
 
@@ -46,15 +48,15 @@ function ContributorTable(props){
    
     {props.pdd==='true'?
     <div>       
-    <div className='m-3'>
+    <div className='m-2'>
     <p>{props.description}</p>
-           <div onClick={()=>updateTrue(true)} className="btn btn-primary mx-3"> Yes </div>
-            <div onClick={()=>updateTrue(false)} className="btn btn-primary mx-3"> No </div>
+           <div onClick={()=>updateTrue(true)} className="btn btn-primary mx-1"> Yes </div>
+            <div onClick={()=>updateTrue(false)} className="btn btn-primary mx-1"> No </div>
             
     </div> 
     <p>{props.verify?"Verified":"Not Verified"} </p></div>:
             
-            <div className={props.verify?"btn btn-primary":"btn btn-danger"}> {props.verify?"Verified 👍":"Not Verified"} </div>}
+            <div className={props.verify?"btn btn-primary mt-3":"btn btn-danger mt-3"}> {props.verify?"Verified 👍":"Not Verified"} </div>}
            
 
             </div>

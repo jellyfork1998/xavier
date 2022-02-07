@@ -44,7 +44,7 @@ function NewMeetupForm(props) {
         </div>
         <div className={classes.control}>
           <label htmlFor='snumber'>Service Number</label>
-          <input type='text' required id='snumber' placeholder="Service No, Trade, Batch etc.." ref={imageInputRef} />
+          <input type='text' required id='snumber'  maxLength='50' placeholder="Service No, Trade, Batch etc.." ref={imageInputRef} />
         </div>
         <div className={classes.control}>
           <label htmlFor='address'>Money</label>
@@ -56,6 +56,8 @@ function NewMeetupForm(props) {
             id='description'
             required
             rows='5'
+            minLength='10'
+            maxLength='30'
             placeholder="Transaction Id, other Messages"
             ref={descriptionInputRef}
           ></textarea>
