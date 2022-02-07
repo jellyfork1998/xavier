@@ -22,7 +22,7 @@ function NewMeetupForm(props) {
       snumber: enteredImage,
       money: enteredAddress,
       description: enteredDescription,
-      verify:true,
+      verify:false,
     };
 
     props.onAddMeetup(meetupData);
