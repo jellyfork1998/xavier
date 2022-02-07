@@ -30,7 +30,7 @@ function ContributorTable(props){
            <div className=" d-flex justify-content-between align-items-start"> {props.verify?<img className="ps-3" src="/ty.png" width='40%'/>:<img className="ps-3" src="/insp.png" width='42%' />} 
             
             <div>
-            <h3 className="text-center text-white pe-3">{props.name}</h3>
+            <h5 className="text-center text-white pe-3">{props.name}</h5>
             
             </div>
             
