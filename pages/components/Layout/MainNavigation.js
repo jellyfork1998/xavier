@@ -7,13 +7,13 @@ function MainNavigation(props) {
 
   return (
     <header className={classes.header}>
-      <div className="d-inline text-center"><h3 className='text-white border p-2'>Xavier Ravi- EX PO, 2 of 86 Batch  </h3> 
+      <div className="d-inline text-center"><h3 className='text-white p-2 pt-3'>Xavier Ravi- EX PO, 2 of 86 Batch - Fund Raising For Medical Expenses  </h3> 
       
       </div>
-      <div className="d-inline text-center"><h3 className='text-white border p-2'>Fund Raising For Medical Expenses </h3> 
+      {/* <div className="d-inline text-center"><h3 className='text-white border p-2'>Fund Raising For Medical Expenses </h3> 
       
       </div>
-     
+      */}
     </header>
   );
 }

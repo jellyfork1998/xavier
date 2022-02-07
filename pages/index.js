@@ -44,7 +44,7 @@ useEffect(() => {
     
    
     <p className="lead">
-    $ send your kindnes to  Name: Veerabhadran S.       Bank: ICICI.                 Branch: Subramaniapuram, Madurai.                   A/c no: 601301508252.        IFSC: ICIC0006013
+    $ send your kindness to  Name: Veerabhadran S.       Bank: ICICI.                 Branch: Subramaniapuram, Madurai.                   A/c no: 601301508252.        IFSC: ICIC0006013
     </p>
   </div>  
  
